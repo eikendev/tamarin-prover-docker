@@ -30,7 +30,7 @@ COPY --from=dependencies /dependencies /usr/local/bin
 RUN set -xe \
 	&& addgroup tamarin \
 	&& adduser --disabled-password --gecos '' --ingroup tamarin tamarin \
-	&& apt-get install -y graphviz \
+	&& apt-get install -y graphviz libtinfo5 \
 	&& apt-get clean
 
 USER tamarin
