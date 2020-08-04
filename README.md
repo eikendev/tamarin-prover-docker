@@ -1,4 +1,4 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/eikendev/tamarin-docker)](https://hub.docker.com/r/eikendev/tamarin-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/eikendev/tamarin-prover)](https://hub.docker.com/r/eikendev/tamarin-prover)
 
 ## About
 
