@@ -1,9 +1,11 @@
-# About
+[![Docker Pulls](https://img.shields.io/docker/pulls/eikendev/tamarin-docker)](https://hub.docker.com/r/eikendev/tamarin-docker)
+
+## About
 
 This container runs the [Tamarin prover](https://tamarin-prover.github.io/) which is being used for security protocol verification.
 The tool is currently being developed at [ETH Zürich](https://ethz.ch/) in Switzerland.
 
-# Usage
+## Usage
 
 I mainly use [Podman](https://podman.io/) to run this image because it's very convenient to run as a normal user.
 It aims to provide compatibility with the CLI of Docker, so you should be able to adjust this to your needs.
