@@ -1,5 +1,3 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/eikendev/tamarin-prover)](https://hub.docker.com/r/eikendev/tamarin-prover)
-
 ## About
 
 This container runs the [Tamarin prover](https://tamarin-prover.github.io/) which is being used for security protocol verification.
