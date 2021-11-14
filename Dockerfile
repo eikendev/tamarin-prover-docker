@@ -6,15 +6,17 @@ RUN set -xe \
 
 FROM base AS dependencies
 
-ENV VERSION 1.4.1
-ENV MAUDE_URL http://maude.cs.illinois.edu/w/images/5/5d/Maude-2.7.1-linux.zip
+ENV VERSION 1.6.0
+ENV MAUDE_URL http://maude.cs.illinois.edu/w/images/2/27/Maude-3.0%2Byices2-linux.zip
+
+RUN set -xe \
+	&& apt-get install -y curl zip
 
 RUN set -xe \
 	&& mkdir -p /dependencies \
-	&& apt-get install -y curl zip \
 	&& curl -q -s -S -L --create-dirs -o maude.zip $MAUDE_URL \
 	&& unzip maude.zip -d /dependencies \
-	&& mv /dependencies/maude.linux64 /dependencies/maude \
+	&& mv /dependencies/maude-Yices2.linux64 /dependencies/maude \
 	&& curl -q -s -S -L --create-dirs -o tamarin.tar.gz https://github.com/tamarin-prover/tamarin-prover/releases/download/$VERSION/tamarin-prover-$VERSION-linux64-ubuntu.tar.gz \
 	&& tar -x -C /dependencies -f tamarin.tar.gz \
 	&& chmod -R +x /dependencies
