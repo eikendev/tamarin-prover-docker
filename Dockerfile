@@ -30,10 +30,10 @@ EXPOSE 3001
 COPY --from=dependencies /dependencies /usr/local/bin
 
 RUN set -xe \
+	&& apt-get install -y graphviz adduser \
+	&& apt-get clean \
 	&& addgroup tamarin \
-	&& adduser --disabled-password --gecos '' --ingroup tamarin tamarin \
-	&& apt-get install -y graphviz libtinfo5 \
-	&& apt-get clean
+	&& adduser --disabled-password --gecos '' --ingroup tamarin tamarin
 
 USER tamarin
 
